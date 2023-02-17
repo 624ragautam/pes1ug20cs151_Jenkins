@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o pes1ug20cs_1 pes1ug20cs151_1.cpp' // build the project using maven
+                sh 'g++ -o pes1ug20cs151_1 pes1ug20cs152_1.cpp' // build the project using maven
                 echo 'Build stage successful'
             }
         }
