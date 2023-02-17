@@ -4,19 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'g++ -o PES1UG20CS151-1 PES1UG20CS151-1.cpp'
+                sh 'g++ -o pes1ug20cs151_1 pes1ug20cs151_1.cpp' // build the project using maven
+                echo 'Build stage successful'
             }
         }
 
         stage('Test') {
             steps {
-                sh './PES1UG20CS151-1'
+                sh './pes1ug20cs151_1'// run unit tests using maven
+                echo 'Test stage successful'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'deployed successfully'
+                echo 'Deployment successful'
             }
         }
     }
